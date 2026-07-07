@@ -1,0 +1,10 @@
+@use '../partials/variables' as *;
+
+.page-content {
+  @media screen and (width >=800px) {
+    padding: 0 10vh;
+  }
+  @media screen and (width <800px) {
+    padding: 0 1em;
+  }
+}

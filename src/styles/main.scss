@@ -1,0 +1,23 @@
+@use 'sass:color';
+@use './base/fonts';
+@use './partials/variables' as *;
+@use './components/hero';
+@use './components/dates';
+@use './components/footer';
+@use './components/about';
+@use './components/content';
+@use './components/menu';
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0; 
+  font-family: $fontFamilyHeadline;
+  font-size: 22pt;
+  line-height: 1.6;
+  background: url("../../src/assets/background3.jpg");
+}

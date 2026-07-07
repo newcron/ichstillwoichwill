@@ -1,0 +1,18 @@
+{
+  "name": "ichstillwoichwill",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8",
+    "sharp": "^0.35.1",
+    "vite": "^8.0.16",
+    "vite-imagetools": "^10.0.1",
+    "vite-plugin-handlebars": "^2.0.3"
+  }
+}

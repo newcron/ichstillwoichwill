@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Cache built/static assets and images for 1 month.
+  RewriteRule ^(?:assets|images)/ - [E=LONG_CACHE:1]
+
+  # HTML should always bypass cache, even if it lives in a cached folder.
+  RewriteRule \.html?$ - [E=LONG_CACHE:,E=NO_CACHE_HTML:1]
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Cache static assets and images for 1 month and require revalidation.
+  Header always set Cache-Control "public, max-age=2592000, must-revalidate" env=LONG_CACHE
+
+  # Never cache HTML documents.
+  Header always set Cache-Control "no-cache, no-store, must-revalidate" env=NO_CACHE_HTML
+  Header always set Pragma "no-cache" env=NO_CACHE_HTML
+  Header always set Expires "0" env=NO_CACHE_HTML
+</IfModule>
+

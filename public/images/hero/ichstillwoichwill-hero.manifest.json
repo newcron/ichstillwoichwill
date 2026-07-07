@@ -1,0 +1,68 @@
+{
+  "source": "src/assets/ichstillwoichwill-hero.jpg",
+  "outputDirectory": "/images/hero",
+  "format": "avif",
+  "encoder": "jsquash-wasm-avif",
+  "widths": [
+    640,
+    768,
+    1024,
+    1280,
+    1536,
+    1920,
+    2560,
+    4000
+  ],
+  "srcset": "/images/hero/ichstillwoichwill-hero-640.avif 640w, /images/hero/ichstillwoichwill-hero-768.avif 768w, /images/hero/ichstillwoichwill-hero-1024.avif 1024w, /images/hero/ichstillwoichwill-hero-1280.avif 1280w, /images/hero/ichstillwoichwill-hero-1536.avif 1536w, /images/hero/ichstillwoichwill-hero-1920.avif 1920w, /images/hero/ichstillwoichwill-hero-2560.avif 2560w, /images/hero/ichstillwoichwill-hero-4000.avif 4000w",
+  "images": [
+    {
+      "width": 640,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-640.avif"
+    },
+    {
+      "width": 768,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-768.avif"
+    },
+    {
+      "width": 1024,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-1024.avif"
+    },
+    {
+      "width": 1280,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-1280.avif"
+    },
+    {
+      "width": 1536,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-1536.avif"
+    },
+    {
+      "width": 1920,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-1920.avif"
+    },
+    {
+      "width": 2560,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-2560.avif"
+    },
+    {
+      "width": 4000,
+      "format": "avif",
+      "encoder": "jsquash-wasm-avif",
+      "path": "/images/hero/ichstillwoichwill-hero-4000.avif"
+    }
+  ],
+  "generatedAt": "2026-06-16T12:11:39.056Z"
+}

@@ -1,0 +1,33 @@
+@use '../partials/variables' as *;
+.page-footer {
+  background: black;
+  font-size: 1.5rem;
+  @media screen and (width >=800px) {
+    padding: 0.3rem 10vh;
+  }
+  @media screen and (width <800px) {
+    padding: 0.3rem 1rem; 
+  }
+  img {
+    width: 1rem;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 2rem;
+  }
+  a {
+    display: inline-block;
+    padding: 0 0.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .page-hero-copyright {
+    color: white;
+    display: inline-block;
+    padding-right: 0.5rem;
+  }
+}

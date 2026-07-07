@@ -1,0 +1,46 @@
+@use '../partials/variables' as *;
+
+.about {
+  margin-top: 5rem;
+  @media screen and (width<800px) {
+    margin: 3rem 1rem;
+
+  }
+  @media screen and (width>=800px) {
+    margin: 3rem 10vh;
+  }
+
+  color: $offWhiteColor;
+  
+  a {
+    color: $headlineColor;
+    text-decoration: none;
+    &:hover, &:focus, &:active {
+      color: $headlineColor;
+    }  }
+
+  
+  h4 {
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    font-size: 2rem;
+    text-align: center;
+    color: $headlineColor;
+    
+    img {
+      height: 0.7em;
+      vertical-align: baseline;
+    }
+  }
+  
+
+  @media screen and (width <850px) {
+    .extra-space-stars {
+      display: none;
+    }
+  }
+
+
+}
+

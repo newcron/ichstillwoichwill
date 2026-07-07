@@ -1,0 +1,120 @@
+@use '../partials/variables' as *;
+
+.page-hero {
+  font-family: $fontFamilyHeadline;
+  font-weight: 900;
+  color: $headlineColor;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  
+  @media (width>=2560px) {
+    background-image: url("/images/hero/ichstillwoichwill-hero-4000.avif");
+  }
+  @media (width<=2560px) and (width > 1920px) {
+    background-image: url("/images/hero/ichstillwoichwill-hero-2560.avif");
+  }
+  @media (width<=1920px) and (width > 1280px) {
+    background-image: url("/images/hero/ichstillwoichwill-hero-1920.avif");
+  }
+  @media (width<=1280px) {
+    background-image: url("/images/hero/ichstillwoichwill-hero-1280.avif");
+  }
+  
+  background-size: cover;
+  background-position: bottom;
+  border-bottom: 4px solid black;
+  box-shadow: 0 7px 60px 10px rgba(0, 0, 0, 0.3);
+
+  a {
+    color: $headlineColor;
+    text-decoration: none;
+    &:hover, &:focus, &:active {
+      color: $headlineColor;
+    }
+  }
+  
+  
+  
+  .page-hero-title {
+    font-size: 4rem;
+
+  }
+
+  .page-hero-subtitle {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .page-hero-title, .page-hero-subtitle {
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 0;
+  }
+
+
+
+  @media screen and (width >= 800px) {
+
+    .page-hero-title {
+      position: absolute;
+      top: 5vh;
+      left: 10vh;
+
+      &::before {
+        float: right;
+        content: "";
+        margin: -0.5em 0 0 0.7em;
+
+        width: 1em;
+        height: 1em;
+        background: url("/src/assets/star.svg") no-repeat center;
+      }
+    }
+
+    .page-hero-subtitle {
+      position: absolute;
+      bottom: 5vh;
+      left: 10vh;
+
+    }
+
+    
+  }
+  @media screen and (width < 800px) {
+
+    .page-hero-title {
+      padding: 0.6em 0 0 0.3em;
+      display: inline-block;
+    }
+
+    .page-hero-subtitle {
+      position: absolute;
+      bottom: 5vh;
+      padding: 0.6em 0 0 0.3em;
+      left: 0vh;
+
+    }
+
+  }
+  
+  
+  
+  .page-hero-button {
+    background-image: url("/src/assets/menu.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 3rem;
+    width: 3.6rem;
+    background-color: rgba(0,0,0,0);
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+
+}
