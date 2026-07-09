@@ -1,9 +1,20 @@
 {{>page-header}}
 <section class="page-content">
 <h3>Bilder der Ausstellung in München</h3>
+    <section class="image-gallery" id="image-gallery" data-image-list="{{imagesJson}}">
+        <button class="image-gallery-previous">
+            <img src="/src/assets/arrow-left-yellow.svg">
+        </button>
+        <img src="/assets/gallery/gallery-00002-640.avif" class="image-gallery-image">
+        <img src="/assets/gallery/gallery-00004-640.avif" class="image-gallery-image-next">
+        <button class="image-gallery-next">
+            <img src="/src/assets/arrow-right-yellow.svg">
+        </button>
+        <!-- 
     {{#images}}
         <img src="{{at640}}">
-    {{/images}}
+    {{/images}} -->
+    </section>
     
 </section>
 {{>page-footer}}

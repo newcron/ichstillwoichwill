@@ -23,24 +23,28 @@ const galleryFilenames = readdirSync(resolve(rootDir, 'src/assets/gallery'))
             at2560: basename+"-2560.avif",
             at1920: basename+"-1920.avif",
             at1280: basename+"-1280.avif",
-            at640: "/src/assets/gallery/"+file+"?w=640&format=avif",
+            at640: basename+"-640.avif"
         }
     });
 
 
 const pageData = {
     '/index.html': {
+        pageId: "home",
         pageName: 'Infos',
     },
     '/impressum.html': {
+        pageId: "imprint",
         pageName: 'Impressum',
     },
     '/datenschutz.html': {
+        pageId: "data-protection",
         pageName: 'Datenschutz',
     },
     '/gallery.html': {
         pageName: 'Galerie',
-        images: galleryFilenames,
+        pageId: "gallery",
+        imagesJson: JSON.stringify(galleryFilenames),
     }
 };
 
@@ -53,7 +57,6 @@ const handlebarsConfig = {
 }
 
 
-console.log("Partials at " + resolve(__dirname, '_partials'));
 
 export default defineConfig({
     base: './',
