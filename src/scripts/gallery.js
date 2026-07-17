@@ -23,7 +23,7 @@ export default class Gallery {
 
     updateImage() {
 
-        const width = this._imageConteiner.width;
+        const width = screen.width;
         this._imageConteiner.src = "/assets/gallery/" + selectRightImage(width, this._images[this._currentIndex]);
         this._nextImagePreloader.src = "/assets/gallery/" + selectRightImage(width, this._images[(this._currentIndex + 1) % this._images.length]);
 
