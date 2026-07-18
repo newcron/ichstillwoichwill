@@ -2,6 +2,8 @@
 @use './base/fonts';
 @use './partials/variables' as *;
 @use './components/hero';
+@use './components/full-text';
+@use './components/half-text';
 @use './components/dates';
 @use './components/footer';
 @use './components/about';
@@ -15,10 +17,28 @@
 }
 
 body {
+  color: $blackFontColor;
   padding: 0;
   margin: 0; 
   font-family: $fontFamilyHeadline;
   font-size: 22pt;
   line-height: 1.6;
-  background: url("../../src/assets/background3.jpg");
+  background-image: url("/assets/original-background-1280.avif");
+  background-size: 75%;
+}
+
+.highlight {
+  $highlightTransition: 38%;
+  display: inline;
+  background-image: linear-gradient(
+          transparent 0,
+          transparent $highlightTransition,
+          $headlineColor $highlightTransition,
+          $headlineColor 97%,
+          transparent 97%
+  );
+
+  /* makes it work across wrapped lines */
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }

@@ -1,0 +1,18 @@
+@use '../partials/variables' as *;
+
+
+.full-text {
+  max-width: $contentMaxWidth;
+  font-size: 3rem;
+  margin: 8rem auto 8rem auto;
+  padding: 0 4rem;
+  text-align: center;
+  line-height: 1.8;
+  letter-spacing: 3%;
+  @media screen and (width < 1024px) {
+    font-size: 2rem;
+  }
+
+
+
+}

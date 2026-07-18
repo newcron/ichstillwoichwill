@@ -6,115 +6,126 @@
   color: $headlineColor;
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 50vh;
   width: 100%;
-  
-  @media (width>=2560px) {
-    background-image: url("/images/hero/ichstillwoichwill-hero-4000.avif");
-  }
-  @media (width<=2560px) and (width > 1920px) {
-    background-image: url("/images/hero/ichstillwoichwill-hero-2560.avif");
-  }
-  @media (width<=1920px) and (width > 1280px) {
-    background-image: url("/images/hero/ichstillwoichwill-hero-1920.avif");
-  }
-  @media (width<=1280px) {
-    background-image: url("/images/hero/ichstillwoichwill-hero-1280.avif");
-  }
-  
-  background-size: cover;
-  background-position: bottom;
-  border-bottom: 4px solid black;
-  box-shadow: 0 7px 60px 10px rgba(0, 0, 0, 0.3);
-
-  a {
-    color: $headlineColor;
-    text-decoration: none;
-    &:hover, &:focus, &:active {
-      color: $headlineColor;
+  background-image: url("/images/hero/ichstillwoichwill-hero-4000.avif");
+  /*
+    @media (width>=2560px) {
+      background-image: url("/assets/gallery/gallery-00043-4000.avif");
     }
-  }
-  
-  
-  
+    @media (width<=2560px) and (width > 1920px) {
+      background-image: url("/assets/gallery/gallery-00043-2560.avif");
+    }
+    @media (width<=1920px) and (width > 1280px) {
+      background-image: url("/assets/gallery/gallery-00043-1920.avif");
+    }
+    @media (width<=1280px) {
+      background-image: url("/assets/gallery/gallery-00043-1280.avif");
+    }*/
+
+  background-size: cover;
+  background-position-y: 80%;
+
+
+
   .page-hero-title {
     font-size: 4rem;
-
-  }
-
-  .page-hero-subtitle {
-    font-size: 3rem;
-    color: white;
-  }
-  
-  .page-hero-title, .page-hero-subtitle {
-    line-height: 1;
+    padding: 0;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -2%;
+    font-weight: 900;
     text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-    padding: 0;
-  }
+    height: 100%;
+    display:inline-flex;
+    
+    
 
+    a {
+      margin: auto 0 1em 1em;
+      color: $headlineColor;
+      text-decoration: none;
 
-
-  @media screen and (width >= 800px) {
-
-    .page-hero-title {
-      position: absolute;
-      top: 5vh;
-      left: 10vh;
+      &:hover, &:focus, &:active {
+        color: $headlineColor;
+      }
 
       &::before {
         float: right;
         content: "";
         margin: -0.5em 0 0 0.7em;
 
-        width: 1em;
-        height: 1em;
+        width: 4rem;
+        height: 4rem;
         background: url("/src/assets/star.svg") no-repeat center;
       }
     }
-
-    .page-hero-subtitle {
-      position: absolute;
-      bottom: 5vh;
-      left: 10vh;
-
-    }
-
     
-  }
-  @media screen and (width < 800px) {
-
-    .page-hero-title {
-      padding: 0.6em 0 0 0.3em;
-      display: inline-block;
-    }
-
-    .page-hero-subtitle {
-      position: absolute;
-      bottom: 5vh;
-      padding: 0.6em 0 0 0.3em;
-      left: 0vh;
-
+    @media screen and (width < 1024px) {
+      font-size: 2rem;
+      a {
+        margin: 4rem;
+        
+        &::before {
+          display: none;
+        }
+      }
     }
 
   }
-  
-  
-  
-  .page-hero-button {
-    background-image: url("/src/assets/menu.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 3rem;
-    width: 3.6rem;
-    background-color: rgba(0,0,0,0);
-    border: 0;
-    cursor: pointer;
+
+
+  .page-hero-instagramlink {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 4rem;
+    top: 4rem;
+
+    img {
+      height: 4rem;
+
+    }
   }
 
+  
+
+  /*
+    @media screen and (width >= 800px) {
+  
+      .page-hero-title {
+        text-align: left;
+        
+        bottom: 1vh;
+  
+        &::before {
+          float: right;
+          content: "";
+          margin: -0.5em 0 0 0.7em;
+  
+          width: 1em;
+          height: 1em;
+          background: url("/src/assets/star.svg") no-repeat center;
+        }
+      }
+  
+      .page-hero-subtitle {
+        position: absolute;
+        bottom: 5vh;
+        left: 10vh;
+  
+      }
+  
+  
+    }
+    @media screen and (width < 800px) {
+  
+      .page-hero-title {
+        padding: 0.6em 0 0 0.3em;
+        display: inline-block;
+      }
+  
+  
+    }
+  */
 
 }

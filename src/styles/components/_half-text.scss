@@ -1,0 +1,115 @@
+@use '../partials/variables' as *;
+
+$imageLeftTextboxPadding: 2rem 2rem 2rem 4rem;
+
+$imageRightTextboxPadding: 2rem 4rem 2rem 2rem;
+
+$twoColBreakpoint: 1150px;
+
+.half-text {
+  
+  
+  .author {
+    text-align: right;
+  }
+  
+  @media screen and (width > $twoColBreakpoint) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .half-text-text {
+      /*  this is for the case when the image is left of the text, then the margins and gaps in the text are turned around */
+      padding: $imageLeftTextboxPadding;
+      min-height: 800px;
+      p {
+        
+        max-width: calc($contentMaxWidth/2 - 2rem);
+        margin-left: auto;
+        margin-right: 0;
+        padding: 0;
+      }
+      
+      &.beige {
+        background: #ccbdb0;
+      }
+      
+      &.white {
+        background: $offWhiteColor
+      }
+    }
+    
+    .half-text-image {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+        &.is-sirid-position {
+          object-position: 60%;
+          
+        }
+      }
+    }
+
+    
+    .half-text-image + .half-text-text {
+      padding: $imageRightTextboxPadding;
+      p {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @media screen and (width <= $twoColBreakpoint) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+
+    .half-text-text {
+      order: -1;
+      padding: 2rem 4rem;
+      min-height: auto;
+      p {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
+      &.beige {
+        background: #ccbdb0;
+      }
+      
+      &.white {
+        background: $offWhiteColor
+      }
+    }
+
+    .half-text-image {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      width: 100%;
+
+      img {
+        position: absolute;
+        inset: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+        &.is-sirid-position {
+          object-position: 60%;
+        }
+      }
+    }
+  }
+
+}
