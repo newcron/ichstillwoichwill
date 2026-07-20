@@ -21,10 +21,15 @@ body {
   padding: 0;
   margin: 0; 
   font-family: $fontFamilyHeadline;
-  font-size: 22pt;
+  @media screen and (width > 550px) {
+    font-size: $defaultFontSize;
+  }
+  @media screen and (width <= 550px) {
+    font-size: $defaultFontSizeSmallVariant;
+  }
   line-height: 1.6;
-  background-image: url("/assets/original-background-1280.avif");
   background-size: 75%;
+  background-image: url("#{$assetsBaseDir}/original-background-1280.avif");
 }
 
 .highlight {

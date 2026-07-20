@@ -1,6 +1,14 @@
+$assetsBaseDir: "/assets";
 $contentMaxWidth: 920pt;
 $blackFontColor: #3f3e3e;
 $headlineColor: #E8FB88;
 $offWhiteColor: rgb(248,249,248);
 $fontFamilyHeadline: 'InterTight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
+$defaultFontSize: 22pt;
+$defaultFontSizeSmallVariant: 16pt;
+
+$smallVariantScreenWidth: 550px;
+
+$defaultSidePadding: 4rem; 
+$defaultSidePaddingSmallVariant: 2rem;

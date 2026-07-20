@@ -12,7 +12,7 @@ const htmlInputs = Object.fromEntries(
         .filter((file) => file.endsWith('.html'))
         .map((file) => [file.replace(/\.html$/, ''), resolve(rootDir, file)]),
 );
-
+/*
 const galleryFilenames = readdirSync(resolve(rootDir, 'src/assets/gallery'))
     .filter((file) => file.endsWith('.jpg'))
     .map((file) => {
@@ -26,7 +26,7 @@ const galleryFilenames = readdirSync(resolve(rootDir, 'src/assets/gallery'))
             at640: basename+"-640.avif"
         }
     });
-
+*/
 
 const pageData = {
     '/index.html': {
@@ -44,7 +44,7 @@ const pageData = {
     '/gallery.html': {
         pageName: 'Galerie',
         pageId: "gallery",
-        imagesJson: JSON.stringify(galleryFilenames),
+        //imagesJson: JSON.stringify(galleryFilenames),
     }
 };
 

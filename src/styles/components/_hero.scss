@@ -8,24 +8,22 @@
   overflow: hidden;
   height: 50vh;
   width: 100%;
-  background-image: url("/images/hero/ichstillwoichwill-hero-4000.avif");
-  /*
-    @media (width>=2560px) {
-      background-image: url("/assets/gallery/gallery-00043-4000.avif");
-    }
-    @media (width<=2560px) and (width > 1920px) {
-      background-image: url("/assets/gallery/gallery-00043-2560.avif");
-    }
-    @media (width<=1920px) and (width > 1280px) {
-      background-image: url("/assets/gallery/gallery-00043-1920.avif");
-    }
-    @media (width<=1280px) {
-      background-image: url("/assets/gallery/gallery-00043-1280.avif");
-    }*/
+
+  @media (width>=2560px) {
+    background-image: url("#{$assetsBaseDir}/ichstillwoichwill-hero-cropped-4000.avif");
+  }
+  @media (width<=2560px) and (width > 1920px) {
+    background-image: url("#{$assetsBaseDir}/ichstillwoichwill-hero-cropped-2560.avif");
+  }
+  @media (width<=1920px) and (width > 1280px) {
+    background-image: url("#{$assetsBaseDir}/ichstillwoichwill-hero-cropped-1920.avif");
+  }
+  @media (width<=1280px) {
+    background-image: url("#{$assetsBaseDir}/ichstillwoichwill-hero-cropped-1280.avif");
+  }
 
   background-size: cover;
-  background-position-y: 80%;
-
+  background-position-y: 70%;
 
 
   .page-hero-title {
@@ -38,9 +36,8 @@
     text-transform: uppercase;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     height: 100%;
-    display:inline-flex;
-    
-    
+    display: inline-flex;
+
 
     a {
       margin: auto 0 1em 1em;
@@ -61,12 +58,16 @@
         background: url("/src/assets/star.svg") no-repeat center;
       }
     }
-    
+
     @media screen and (width < 1024px) {
       font-size: 2rem;
       a {
-        margin: 4rem;
-        
+        margin: $defaultSidePaddingSmallVariant;
+        @media screen and (width <= $smallVariantScreenWidth) {
+          margin: $defaultSidePaddingSmallVariant;
+
+        }
+
         &::before {
           display: none;
         }
@@ -78,54 +79,28 @@
 
   .page-hero-instagramlink {
     position: absolute;
-    right: 4rem;
-    top: 4rem;
+    right: $defaultSidePadding;
+    top: $defaultSidePadding;
+
+    @media screen and (width <= $smallVariantScreenWidth) {
+      & {
+        right: $defaultSidePaddingSmallVariant;
+        top: $defaultSidePaddingSmallVariant;
+      }
+    }
 
     img {
-      height: 4rem;
+      height: $defaultSidePadding;
+      @media screen and (width <= $smallVariantScreenWidth) {
+        & {
+          height: $defaultSidePaddingSmallVariant;
+          
+        }
+
+      }
 
     }
   }
 
-  
-
-  /*
-    @media screen and (width >= 800px) {
-  
-      .page-hero-title {
-        text-align: left;
-        
-        bottom: 1vh;
-  
-        &::before {
-          float: right;
-          content: "";
-          margin: -0.5em 0 0 0.7em;
-  
-          width: 1em;
-          height: 1em;
-          background: url("/src/assets/star.svg") no-repeat center;
-        }
-      }
-  
-      .page-hero-subtitle {
-        position: absolute;
-        bottom: 5vh;
-        left: 10vh;
-  
-      }
-  
-  
-    }
-    @media screen and (width < 800px) {
-  
-      .page-hero-title {
-        padding: 0.6em 0 0 0.3em;
-        display: inline-block;
-      }
-  
-  
-    }
-  */
 
 }

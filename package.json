@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "rm  public/assets; vite build && npm run optimize-images",
     "preview": "vite preview",
     "optimize-images": "node scripts/optimize-images.js && ln -s ../dist/assets public/assets"
   },

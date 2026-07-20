@@ -5,12 +5,19 @@
   max-width: $contentMaxWidth;
   font-size: 3rem;
   margin: 8rem auto 8rem auto;
-  padding: 0 4rem;
+  padding: 0 $defaultSidePadding;
   text-align: center;
   line-height: 1.8;
   letter-spacing: 3%;
+  
   @media screen and (width < 1024px) {
     font-size: 2rem;
+  }
+  
+  @media screen and (width <= $smallVariantScreenWidth) {
+    margin: 2rem auto 2rem auto;
+    padding: 0 $defaultSidePaddingSmallVariant;
+    font-size: 1.5rem;
   }
 
 
