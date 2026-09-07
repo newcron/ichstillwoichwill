@@ -2,6 +2,11 @@
 
 
 .full-text {
+  
+  &.alt-color {
+    background: red;   
+  }
+  
   max-width: $contentMaxWidth;
   font-size: 3rem;
   margin: 8rem auto 8rem auto;

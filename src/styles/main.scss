@@ -10,10 +10,15 @@
 @use './components/content';
 @use './components/menu';
 @use './components/imagegallery';
+@use './components/initiatives-map';
 
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --headline-color: #{$headlineColor};
 }
 
 body {
@@ -46,4 +51,9 @@ body {
   /* makes it work across wrapped lines */
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+a.highlight {
+  color: $blackFontColor;
+  text-decoration: none;
 }

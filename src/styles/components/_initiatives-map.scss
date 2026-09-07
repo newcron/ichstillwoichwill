@@ -1,0 +1,30 @@
+@use '../partials/variables' as *;
+@use './half-text' as *;
+
+#initiative-map-area {
+  
+  
+    .initiatives-map {
+      
+      @media screen and (width > $twoColBreakpoint) {
+        display: none;
+      }
+    }
+  
+    .initiatives-map-canvas {
+      max-height: 700px;
+      width: 100%;
+      height: auto;
+      min-height: 320px;
+      aspect-ratio: 3/4;
+      display: inline-block;
+      background: transparent;
+    }
+
+  .leaflet-container {
+    background: transparent;
+  }
+
+}
+
+
