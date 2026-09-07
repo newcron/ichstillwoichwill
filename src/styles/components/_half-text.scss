@@ -21,6 +21,10 @@ $twoColBreakpoint: 1150px;
       /*  this is for the case when the image is left of the text, then the margins and gaps in the text are turned around */
       padding: $imageLeftTextboxPadding;
       min-height: 800px;
+      
+      &.low-cut {
+        min-height: auto;
+      }
 
       p {
 
@@ -54,6 +58,10 @@ $twoColBreakpoint: 1150px;
         &.is-sirid-position {
           object-position: 60%;
 
+        }
+        
+        &.is-group-picture {
+          object-position: 50% 60%;
         }
       }
     }
@@ -113,6 +121,11 @@ $twoColBreakpoint: 1150px;
 
         &.is-sirid-position {
           object-position: 60%;
+        }
+
+
+        &.is-group-picture {
+          object-position: 50% 55%;
         }
       }
     }
